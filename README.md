@@ -49,7 +49,9 @@ A comprehensive machine learning framework for classifying human activities usin
 ## 🚀 How to Run
 
 ### Option 1: Google Colab (Recommended)
-1. Open `HAR_Project.ipynb` in [Google Colab](https://colab.research.google.com/)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Meshari-glitch/HAR-ML-Framework/blob/main/HAR_Project.ipynb)
+
+1. Click the badge above or [open directly in Colab](https://colab.research.google.com/github/Meshari-glitch/HAR-ML-Framework/blob/main/HAR_Project.ipynb)
 2. Run all cells sequentially
 3. Dataset loads automatically
 
@@ -90,7 +92,7 @@ HAR-ML-Framework/
 **Meshari Saud Alaskar**  
 BSc in Computer Science — Prince Sattam Bin Abdulaziz University  
 📧 Meshari.askar@gmail.com  
-🔗 [LinkedIn](https://linkedin.com/in/meshari-al-askar)  
+🔗 [LinkedIn](https://www.linkedin.com/in/meshari-alaskar-cdmp%C2%AE-417937297/)  
 💻 [GitHub](https://github.com/Meshari-glitch)
 
 ---
