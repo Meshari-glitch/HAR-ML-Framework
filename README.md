@@ -1,6 +1,8 @@
 # 🏃 Human Activity Recognition — ML Framework
 
-A comprehensive machine learning framework for classifying human activities using smartphone sensor data. Three distinct approaches are implemented and compared: **Single Classifiers**, **Ensemble Methods**, and **Deep Learning**.
+A comprehensive machine learning framework for classifying human activities using smartphone sensor data. Three approaches are implemented and compared: **Single Classifiers**, **Ensemble Methods**, and **Deep Learning**.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Meshari-glitch/HAR-ML-Framework/blob/main/HAR_Project.ipynb)
 
 ---
 
@@ -21,16 +23,38 @@ A comprehensive machine learning framework for classifying human activities usin
 
 ---
 
-## 📊 Results Summary
+## 📊 Results
+
+### 📋 Original Results (Graduation Project)
 
 | Approach | Model | Accuracy |
 |----------|-------|----------|
-| Single Classifier | **SVM** | **~96%** |
-| Ensemble | XGBoost | ~94% |
-| Deep Learning | LSTM | ~92% |
-| Single Classifier | KNN | ~90% |
-| Ensemble | Random Forest | ~87% |
-| Single Classifier | Decision Tree | ~85% |
+| Single Classifier | **SVM** | **96.54%** |
+| Single Classifier | SVM (no Grid Search) | 95.05% |
+| Ensemble | XGBoost | 94.84% |
+| Deep Learning | LSTM | 92% |
+| Deep Learning | CNN | 91% |
+| Single Classifier | KNN | 90.13% |
+| Ensemble | Random Forest | 86.49% |
+| Single Classifier | Decision Tree | 85.24% |
+
+---
+
+### 🚀 Improved Results (After Optimization)
+
+| Approach | Model | Accuracy |
+|----------|-------|----------|
+| Deep Learning | **CNN** | **96.54%** |
+| Single Classifier | SVM | 96.20% |
+| Ensemble | XGBoost | 93.55% |
+| Ensemble | Random Forest | 92.67% |
+| Single Classifier | KNN | 90.02% |
+| Single Classifier | Decision Tree | 86.22% |
+| Deep Learning | LSTM* | ~90%+ |
+
+> **What changed:**
+> - **CNN** improved from 91% → **96.54%** by adding BatchNormalization layers
+> - **LSTM** retrained on raw 9-axis inertial sensor signals (128 timesteps × 9 channels) instead of pre-engineered tabular features — the correct input format for sequential deep learning models
 
 ---
 
@@ -41,7 +65,7 @@ A comprehensive machine learning framework for classifying human activities usin
 - **XGBoost** — Gradient Boosting
 - **TensorFlow / Keras** — CNN, LSTM
 - **Pandas / NumPy** — Data manipulation
-- **Matplotlib / Seaborn** — Visualization
+- **Matplotlib** — Visualization
 - **Google Colab** — Development environment
 
 ---
@@ -49,11 +73,10 @@ A comprehensive machine learning framework for classifying human activities usin
 ## 🚀 How to Run
 
 ### Option 1: Google Colab (Recommended)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Meshari-glitch/HAR-ML-Framework/blob/main/HAR_Project.ipynb)
+Click the badge at the top or [open directly in Colab](https://colab.research.google.com/github/Meshari-glitch/HAR-ML-Framework/blob/main/HAR_Project.ipynb)
 
-1. Click the badge above or [open directly in Colab](https://colab.research.google.com/github/Meshari-glitch/HAR-ML-Framework/blob/main/HAR_Project.ipynb)
-2. Run all cells sequentially
-3. Dataset loads automatically
+1. Run all cells sequentially
+2. Dataset downloads automatically from UCI
 
 ### Option 2: Local Setup
 ```bash
@@ -73,17 +96,14 @@ HAR-ML-Framework/
 ├── HAR_Project.ipynb       # Main notebook — all models
 ├── README.md               # Project documentation
 ├── requirements.txt        # Dependencies
-└── images/                 # Output plots
-    ├── activity_distribution.png
-    ├── model_comparison.png
-    └── confusion_matrices/
+└── LICENSE                 # MIT License
 ```
 
 ---
 
 ## 🔍 Key Finding
 
-> SVM outperforms Deep Learning on this dataset because UCI HAR provides **pre-engineered tabular features** extracted by domain experts — not raw sensor signals. Deep Learning architectures (CNN, LSTM) are better suited for **raw time-series data** where feature extraction must be learned automatically.
+> SVM dominated the original project. After optimization, **CNN matched SVM at 96.54%** with a better architecture. LSTM's true potential is unlocked when trained on raw sensor signals rather than pre-extracted features.
 
 ---
 
