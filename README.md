@@ -41,13 +41,13 @@ A comprehensive machine learning framework for classifying human activities usin
 
 | Model | Before | After | Change |
 |-------|--------|-------|--------|
-| CNN | 91.00% | **97.15%** | ▲ 6.15% |
-| Random Forest | 86.49% | 92.67% | ▲ 6.18% |
-| LSTM | 92.00% | 91.01% | ▼ 0.99% |
-| Decision Tree | 85.24% | 86.22% | ▲ 0.98% |
-| KNN | 90.13% | 90.02% | ▼ 0.11% |
+| **SVM** | 96.54% | **96.20%** | ▼ 0.34% |
+| CNN | 91.00% | 95.66% | ▲ 4.66% |
 | XGBoost | 94.84% | 93.55% | ▼ 1.29% |
-| SVM | 96.54% | 96.20% | ▼ 0.34% |
+| Random Forest | 86.49% | 92.67% | ▲ 6.18% |
+| KNN | 90.13% | 90.02% | ▼ 0.11% |
+| LSTM | 92.00% | 89.85% | ▼ 2.15% |
+| Decision Tree | 85.24% | 86.22% | ▲ 0.98% |
 
 ---
 
