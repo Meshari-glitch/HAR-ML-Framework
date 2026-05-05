@@ -25,36 +25,29 @@ A comprehensive machine learning framework for classifying human activities usin
 
 ## 📊 Results
 
-### 📋 Original Results (Graduation Project)
+### 📋 Original (Graduation Project)
 
-| Approach | Model | Accuracy |
-|----------|-------|----------|
-| Single Classifier | **SVM** | **96.54%** |
-| Single Classifier | SVM (no Grid Search) | 95.05% |
-| Ensemble | XGBoost | 94.84% |
-| Deep Learning | LSTM | 92% |
-| Deep Learning | CNN | 91% |
-| Single Classifier | KNN | 90.13% |
-| Ensemble | Random Forest | 86.49% |
-| Single Classifier | Decision Tree | 85.24% |
+| Model | Accuracy |
+|-------|----------|
+| **SVM** | **96.54%** |
+| XGBoost | 94.84% |
+| LSTM | 92.00% |
+| CNN | 91.00% |
+| KNN | 90.13% |
+| Random Forest | 86.49% |
+| Decision Tree | 85.24% |
 
----
+### 🚀 Improved
 
-### 🚀 Improved Results (After Optimization)
-
-| Approach | Model | Accuracy |
-|----------|-------|----------|
-| Deep Learning | **CNN** | **96.54%** |
-| Single Classifier | SVM | 96.20% |
-| Ensemble | XGBoost | 93.55% |
-| Ensemble | Random Forest | 92.67% |
-| Single Classifier | KNN | 90.02% |
-| Single Classifier | Decision Tree | 86.22% |
-| Deep Learning | LSTM* | ~90%+ |
-
-> **What changed:**
-> - **CNN** improved from 91% → **96.54%** by adding BatchNormalization layers
-> - **LSTM** retrained on raw 9-axis inertial sensor signals (128 timesteps × 9 channels) instead of pre-engineered tabular features — the correct input format for sequential deep learning models
+| Model | Before | After | Change |
+|-------|--------|-------|--------|
+| CNN | 91.00% | **97.15%** | ▲ 6.15% |
+| Random Forest | 86.49% | 92.67% | ▲ 6.18% |
+| LSTM | 92.00% | 91.01% | ▼ 0.99% |
+| Decision Tree | 85.24% | 86.22% | ▲ 0.98% |
+| KNN | 90.13% | 90.02% | ▼ 0.11% |
+| XGBoost | 94.84% | 93.55% | ▼ 1.29% |
+| SVM | 96.54% | 96.20% | ▼ 0.34% |
 
 ---
 
@@ -73,10 +66,7 @@ A comprehensive machine learning framework for classifying human activities usin
 ## 🚀 How to Run
 
 ### Option 1: Google Colab (Recommended)
-Click the badge at the top or [open directly in Colab](https://colab.research.google.com/github/Meshari-glitch/HAR-ML-Framework/blob/main/HAR_Project.ipynb)
-
-1. Run all cells sequentially
-2. Dataset downloads automatically from UCI
+Click the badge above or [open directly in Colab](https://colab.research.google.com/github/Meshari-glitch/HAR-ML-Framework/blob/main/HAR_Project.ipynb)
 
 ### Option 2: Local Setup
 ```bash
@@ -98,12 +88,6 @@ HAR-ML-Framework/
 ├── requirements.txt        # Dependencies
 └── LICENSE                 # MIT License
 ```
-
----
-
-## 🔍 Key Finding
-
-> SVM dominated the original project. After optimization, **CNN matched SVM at 96.54%** with a better architecture. LSTM's true potential is unlocked when trained on raw sensor signals rather than pre-extracted features.
 
 ---
 
